@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shapes_area"
+version = "1.0.0"
+description = "Библиотека для вычисления площади круга по радиусу и треугольника по трем сторонам"
+authors = [
+    {name = "Alex91482", email = "example@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0"
+]
+dev = [
+    "black",
+    "flake8",
+    "mypy",
+    "isort"
+]
+
+[project.urls]
+Repository = ""
+
+[tool.setuptools]
+packages = ["shapes_area"]
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+addopts = "--verbose --color=yes"
+testpaths = ["tests"]
